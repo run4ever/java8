@@ -10,6 +10,7 @@ public class LambdaComparator {
 		List<Person> persons = Arrays.asList(personsArray);
 		persons.sort((p1, p2) -> p1.getAge() - p2.getAge());
 
-		persons.forEach(x -> System.out.println(x));
+		//persons.forEach(x -> System.out.println(x));
+		persons.forEach(System.out::println);
 	}
 }

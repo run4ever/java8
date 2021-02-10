@@ -12,18 +12,20 @@ public class StaticMethodReference {
 
 	public static void main(String[] args) {
 		List<String> names = Arrays.asList("Don", "King", "Kong");
+//		StringListFormatter formatter = (delimiter, list) -> {
+//			StringBuilder sb = new StringBuilder(100);
+//			int size = list.size();
+//			for (int i = 0; i < size; i++) {
+//				sb.append(list.get(i));
+//				if (i < size - 1) {
+//					sb.append(delimiter);
+//				}
+//			}
+	//	return sb.toString();
+//	};
 
-		StringListFormatter formatter = (delimiter, list) -> {
-			StringBuilder sb = new StringBuilder(100);
-			int size = list.size();
-			for (int i = 0; i < size; i++) {
-				sb.append(list.get(i));
-				if (i < size - 1) {
-					sb.append(delimiter);
-				}
-			}
-			return sb.toString();
-		};
-		formatAndPrint(formatter, ", ", names);
+		formatAndPrint(String::join, ", ", names);
+
+
 	}
 }
