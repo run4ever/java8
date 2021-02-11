@@ -1,15 +1,17 @@
 package com.training.optional.tp1;
 
+import java.util.Optional;
+
 public class Address {
-	private String street;
+	private Optional<String> street;
 	private String city;
 
 	public Address(String street, String city) {
-		this.street = street;
+		this.street = Optional.ofNullable(street);
 		this.city = city;
 	}
 
-	public String getStreet() {
+	public Optional<String> getStreet() {
 		return street;
 	}
 
